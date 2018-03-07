@@ -1,0 +1,30 @@
+.button-container {
+    margin: 0px auto;
+}
+
+.result-container {
+    margin: 10px auto;
+}
+
+.animals {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form-container {
+    margin: 10px auto;
+}
+
+.form1 {
+    text-align: center;
+    color: grey;
+}
+
+.form2 {
+    margin: 10px 0px 0px 15px;
+}
+
+.rating {
+    margin: 5px 0px 5px 110px;
+}
