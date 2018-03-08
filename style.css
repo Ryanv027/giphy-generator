@@ -1,9 +1,23 @@
+body {
+    align-content: center;
+}
+
 .button-container {
     margin: 0px auto;
 }
 
-.result-container {
+.gif-container {
     margin: 10px auto;
+    width: 80%
+}
+
+img {
+    width: 100%
+}
+
+.list {
+    width: 33%;
+    display: inline-block;
 }
 
 .animals {
@@ -26,5 +40,6 @@
 }
 
 .rating {
-    margin: 5px 0px 5px 110px;
+    width: 25%;
+    margin: 10px auto;
 }
