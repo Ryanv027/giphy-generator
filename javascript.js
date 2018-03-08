@@ -5,7 +5,6 @@ $('document').ready(function() {
 
 })
 
-
 $('.form-container').on('click', '#submit', function() {
     event.preventDefault()
     var info = $('#input').val().trim()
@@ -22,7 +21,7 @@ $('.button-container').on('click', '.animals', function() {
     $('#display').empty()
     var buttonInfo = $(this).attr('value')
 
-    var queryURL = `https:api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=10`
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=10`
 
     $.ajax({
         url: queryURL,
