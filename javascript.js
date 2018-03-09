@@ -25,7 +25,7 @@ $('.button-container').on('click', '.animals', function() {
             var giphy = response.data[i].images.original_still.url
             var giphy1 = response.data[i].images.original.url
             var rating = response.data[i].rating
-            $('#display').append(`<li class="list list${i}"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
+            $('#display').append(`<li class="list" number="${i}"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
         }
     })
     $('.new-button').append(`<button class='animals more-button' value='${buttonInfo}'>More</button>`)
@@ -46,7 +46,7 @@ $('.new-button').on('click', '.animals', function() {
             var giphy1 = response.data[i].images.original.url
             var rating = response.data[i].rating
             console.log(giphy + rating)
-            $('#display').append(`<li class="list" id="${i}"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
+            $('#display').append(`<li class="list"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
         }
     })
     $('.new-button').empty()
@@ -64,9 +64,14 @@ $('.gif-container').on('click', '.gif', function() {
 })
 
 $('.big-display').on('click', '.list', function() {
-    var spot = ($(this).attr('id'))
-    $('.gif-container').append(this)
-    $(this).attr('id', '')
+    var spot = ($(this).attr('number'))
+    if (spot == 0) {
+        $(`.gif-container li:eq(${spot})`).before(this)
+        $(this).attr('id', '')
+    } else {
+        $(`.gif-container li:eq(${spot - 1})`).after(this)
+        $(this).attr('id', '')
+    }
 })
 
 $('.big-display').on('click', '.gif', function() {
