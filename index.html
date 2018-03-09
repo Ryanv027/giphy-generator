@@ -12,26 +12,39 @@
 </head>
 
 <body>
-
-    <div class="rows">
-        <div class="col-8 button-container" id="giphybuttons"></div>
+    <div class="container demo">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <h1 class="main-title"><span class="thin">Explore</span> GIPHYS <br>&#8595 &#8595 &#8595
+                    <div class="row">
+                        <div class="button-container" id="giphybuttons"></div>
+                    </div>
+                </h1>
+            </div>
+        </div>
     </div>
-
     <div class="row">
-        <div class="col-2 form-container">
+        <div class="form-container">
             <form class="form" action="">
                 <input type="text" class="form1" id="input" value="">
                 <br>
-                <input type="submit" class="form2" id="submit" value="Make New Button">
+                <input type="submit" class="form2 make-button" id="submit" value="Make New Button">
             </form>
         </div>
     </div>
-
     <ul class="gif-container" id="display">
 
     </ul>
 
 
+
+
+
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="javascript.js"></script>
 </body>

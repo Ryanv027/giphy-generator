@@ -1,4 +1,4 @@
-var topics = [`<button class="animals" value="giraffe">Giraffe</button>`, `<button class="animals" value="Tiger">Tiger</button>`, `<button class="animals" value="alligator">Alligator</button>`, `<button class="animals" value="falcon">Falcon</button>`, `<button class="animals" value="Shark">Shark</button>`, `<button class="animals" value="starfish">Starfish</button>`, `<button class="animals" value="Frog">Frog</button>`, `<button class="animals" value="horse">Horse</button>`, `<button class="animals" value="dolphin">Dolphin</button>`]
+var topics = [`<button class="animals" value="gopro surfing">Surfing</button>`, `<button class="animals" value="gopro snowboarding">Snowboarding</button>`, `<button class="animals" value="gopro skating">Skating</button>`]
 
 $('document').ready(function() {
     $('.button-container').append(topics)
@@ -21,14 +21,14 @@ $('.button-container').on('click', '.animals', function() {
     $('#display').empty()
     var buttonInfo = $(this).attr('value')
 
-    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=10`
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=12`
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
         console.log(response)
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 12; i++) {
             var giphy = response.data[i].images.original_still.url
             var giphy1 = response.data[i].images.original.url
             var rating = response.data[i].rating
