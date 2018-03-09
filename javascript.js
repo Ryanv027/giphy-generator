@@ -58,10 +58,27 @@ $('.gif-container').on('click', '.list', function() {
     $(this).attr('id', 'top-button')
 })
 $('.gif-container').on('click', '.gif', function() {
-    $(this).attr('src', $(this).attr('data-animate'))
-    $(this).attr('data-state', 'animate')
 
-    $(this).attr('style', 'height: 600px; width: 600px;')
+    var x = window.matchMedia("(max-width: 400px)")
+    var truth = x.matches
+
+    if (truth === true) { // If media query matches
+        $(this).attr('src', $(this).attr('data-animate'))
+        $(this).attr('data-state', 'animate')
+
+        $(this).attr('style', 'height: 300px; width: 300px;')
+
+    } else {
+        $(this).attr('src', $(this).attr('data-animate'))
+        $(this).attr('data-state', 'animate')
+
+        $(this).attr('style', 'height: 600px; width: 600px;')
+    }
+
+
+
+
+
 })
 
 $('.big-display').on('click', '.list', function() {
