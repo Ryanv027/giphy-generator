@@ -32,7 +32,6 @@ $('.button-container').on('click', '.animals', function() {
         }
     })
     $('.new-button').append(`<button class='animals more-button' value='${buttonInfo}'>More</button>`)
-
 })
 
 $('.new-button').on('click', '.animals', function() {
@@ -43,7 +42,6 @@ $('.new-button').on('click', '.animals', function() {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-
         for (var i = 13; i < 25; i++) {
             var giphy = response.data[i].images.original_still.url
             var giphy1 = response.data[i].images.original.url
@@ -61,21 +59,17 @@ $('.gif-container').on('click', '.list', function() {
     $('.big-display').append(this)
     $(this).attr('id', 'top-button')
 })
-$('.gif-container').on('click', '.gif', function() {
 
+$('.gif-container').on('click', '.gif', function() {
     var x = window.matchMedia("(max-width: 400px)")
     var truth = x.matches
-
     if (truth === true) { // If media query matches
         $(this).attr('src', $(this).attr('data-animate'))
         $(this).attr('data-state', 'animate')
-
         $(this).attr('style', 'height: 300px; width: 300px;')
-
     } else {
         $(this).attr('src', $(this).attr('data-animate'))
         $(this).attr('data-state', 'animate')
-
         $(this).attr('style', 'height: 600px; width: 600px;')
     }
 })
@@ -96,5 +90,3 @@ $('.big-display').on('click', '.gif', function() {
     $(this).attr('data-state', 'still')
     $(this).attr('style', 'height: 300px; width: 300px;')
 })
-
-//Create an onclick event that stores the value from the
