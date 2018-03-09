@@ -31,7 +31,7 @@ $('.button-container').on('click', '.animals', function() {
             $('#display').append(`<li class="list" number="${i}"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
         }
     })
-    $('.new-button').append(`<button class='animals more-button' value='${buttonInfo}'>More</button>`)
+    $('.new-button').append(`<button class='more-button' id='morez'value='${buttonInfo}'>More</button>`)
 })
 
 $('.new-button').on('click', '.animals', function() {

@@ -7,6 +7,10 @@ button {
     padding: 1em 2em;
 }
 
+#morez {
+    background: white;
+}
+
 .animals {
     margin: 10px;
     padding: 10px;
