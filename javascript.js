@@ -19,7 +19,7 @@ $('.button-container').on('click', '.animals', function() {
     var element = document.getElementById("display")
     element.scrollIntoView()
     var buttonInfo = $(this).attr('value')
-    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=25`
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=12`
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -36,7 +36,7 @@ $('.button-container').on('click', '.animals', function() {
 
 $('.new-button').on('click', '.animals', function() {
     var buttonInfo = $(this).attr('value')
-    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=25`
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&offset=13&limit=25`
 
     $.ajax({
         url: queryURL,

@@ -1,3 +1,24 @@
+button {
+    background: none;
+    border: 2px solid black;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+.animals {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.animals:hover,
+.animals:focus {
+    transform: translateY(-0.5em);
+}
+
 .large-header {
     position: relative;
     width: 100%;
@@ -34,12 +55,6 @@
     font-weight: 300;
 }
 
-@media only screen and (max-width: 768px) {
-    .demo .main-title {
-        font-size: 3em;
-    }
-}
-
 body {
     align-content: center;
     background: rgb(24, 24, 24);
@@ -74,12 +89,6 @@ img {
     display: inline-block;
 }
 
-.animals {
-    margin: 10px;
-    padding: 10px;
-    font-size: 20px;
-}
-
 .form-container {
     margin: 10px auto;
 }
@@ -110,6 +119,12 @@ img {
     text-align: center;
     margin: 0 auto;
     width: 100%
+}
+
+@media only screen and (max-width: 768px) {
+    .demo .main-title {
+        font-size: 3em;
+    }
 }
 
 @media screen and (max-width: 400px) {
