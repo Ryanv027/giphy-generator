@@ -115,6 +115,10 @@ img {
 @media screen and (max-width: 400px) {
     .list {
         width: 10%;
-        display: inline-block;
+        display: block;
+    }
+    #top-button {
+        height: 50px;
+        width: 50px;
     }
 }
