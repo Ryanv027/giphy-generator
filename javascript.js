@@ -34,7 +34,7 @@ $('.button-container').on('click', '.animals', function() {
     $('.new-button').append(`<button class='more-button' id='morez'value='${buttonInfo}'>More</button>`)
 })
 
-$('.new-button').on('click', '.animals', function() {
+$('.new-button').on('click', '#morez', function() {
     var buttonInfo = $(this).attr('value')
     var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&offset=13&limit=25`
 
