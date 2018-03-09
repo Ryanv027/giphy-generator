@@ -88,3 +88,13 @@ img {
     margin: 10px auto;
     color: white;
 }
+
+.new-button {
+    margin: 10px auto;
+}
+
+.more-button {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%
+}

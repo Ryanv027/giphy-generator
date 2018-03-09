@@ -1,4 +1,4 @@
-var topics = [`<button class="animals" value="gopro surfing">Surfing</button>`, `<button class="animals" value="gopro snowboarding">Snowboarding</button>`, `<button class="animals" value="gopro skating">Skating</button>`]
+var topics = [`<button class="animals" value="gopro+surfing">Surfing</button>`, `<button class="animals" value="gopro+snowboarding">Snowboarding</button>`, `<button class="animals" value="gopro+skating">Skating</button>`]
 
 $('document').ready(function() {
     $('.button-container').append(topics)
@@ -21,7 +21,7 @@ $('.button-container').on('click', '.animals', function() {
     $('#display').empty()
     var buttonInfo = $(this).attr('value')
 
-    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=12`
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=25`
 
     $.ajax({
         url: queryURL,
@@ -36,7 +36,31 @@ $('.button-container').on('click', '.animals', function() {
             $('#display').append(`<li class="list"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
         }
     })
+    $('.new-button').append(`<button class='animals more-button' value='${buttonInfo}'>More</button>`)
+
 })
+
+$('.new-button').on('click', '.animals', function() {
+    var buttonInfo = $(this).attr('value')
+
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=25`
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response)
+        for (var i = 13; i < 25; i++) {
+            var giphy = response.data[i].images.original_still.url
+            var giphy1 = response.data[i].images.original.url
+            var rating = response.data[i].rating
+            console.log(giphy + rating)
+            $('#display').append(`<li class="list"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
+        }
+    })
+    $('.new-button').empty()
+})
+
 $('.gif-container').on('click', '.gif', function() {
     var state = ($(this).attr('data-state'))
     if (state === 'still') {
