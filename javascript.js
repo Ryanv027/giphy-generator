@@ -56,6 +56,8 @@ $('.new-button').on('click', '.animals', function() {
 })
 
 $('.gif-container').on('click', '.list', function() {
+    var element = document.getElementById("forms")
+    element.scrollIntoView()
     $('.big-display').append(this)
     $(this).attr('id', 'top-button')
 })
@@ -76,11 +78,6 @@ $('.gif-container').on('click', '.gif', function() {
 
         $(this).attr('style', 'height: 600px; width: 600px;')
     }
-
-
-
-
-
 })
 
 $('.big-display').on('click', '.list', function() {
@@ -88,7 +85,6 @@ $('.big-display').on('click', '.list', function() {
     if (spot == 0) {
         $(`.gif-container li:eq(${spot})`).before(this)
         $(this).attr('id', '')
-
     } else {
         $(`.gif-container li:eq(${spot - 1})`).after(this)
         $(this).attr('id', '')
