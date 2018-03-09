@@ -47,7 +47,7 @@ $('.new-button').on('click', '.animals', function() {
             var giphy1 = response.data[i].images.original.url
             var rating = response.data[i].rating
             console.log(giphy + rating)
-            $('#display').append(`<li class="list"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
+            $('#display').append(`<li class="list" number="${i}"><img src="${giphy}" class="gif" data-still="${giphy}" data-animate="${giphy1}" data-state="still" style="height: 300px; width:300px;"><p class="rating">Rating: ${rating}</p></li>`)
         }
     })
     $('.new-button').empty()
