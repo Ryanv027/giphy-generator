@@ -111,3 +111,10 @@ img {
     margin: 0 auto;
     width: 100%
 }
+
+@media screen and (max-width: 400px) {
+    .list {
+        width: 10%;
+        display: inline-block;
+    }
+}
