@@ -16,6 +16,7 @@ $('.form-container').on('click', '#submit', function() {
 $('.button-container').on('click', '.animals', function() {
     $('#display').empty()
     $('.new-button').empty()
+    window.scrollTo(0, 1000)
     var buttonInfo = $(this).attr('value')
     var queryURL = `https://api.giphy.com/v1/gifs/search?q=${buttonInfo}&api_key=2kPpZ7Z6yXW2vvB9kOd9ar4ml3JRXKUb&limit=25`
     $.ajax({
@@ -86,6 +87,7 @@ $('.big-display').on('click', '.list', function() {
     if (spot == 0) {
         $(`.gif-container li:eq(${spot})`).before(this)
         $(this).attr('id', '')
+
     } else {
         $(`.gif-container li:eq(${spot - 1})`).after(this)
         $(this).attr('id', '')
