@@ -1,4 +1,4 @@
-var topics = [`<button class="animals" value="gopro+surfing">Surfing</button>`, `<button class="animals" value="gopro+snowboarding">Snowboarding</button>`, `<button class="animals" value="gopro+skating">Skating</button>`]
+var topics = [`<button class="animals" value="surfing+big+waves">Surfing</button>`, `<button class="animals" value="snowboarding">Snowboarding</button>`, `<button class="animals" value="skateboarding">Skating</button>`]
 
 $('document').ready(function() {
     $('.button-container').append(topics)
