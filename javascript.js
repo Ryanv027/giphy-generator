@@ -4,6 +4,8 @@ $('document').ready(function() {
     $('.button-container').append(topics)
 })
 
+
+
 $('.form-container').on('click', '#submit', function() {
     event.preventDefault()
     var info = $('#input').val().trim()
